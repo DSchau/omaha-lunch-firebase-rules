@@ -1,0 +1,87 @@
+:host {
+  flex: 0;
+}
+
+header {
+  display: flex;
+  background-color: #1a1a1a;
+  min-height: 48px;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.logo {
+  background-image: url('~/assets/images/logo-inverted.svg');
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: 175ms ease-in-out;
+}
+
+.logo:hover {
+  background-image:  url('~/assets/images/logo.svg');
+}
+
+.links {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding-left: 2rem;
+  overflow: hidden;
+  min-height: 48px;
+}
+
+.link-container {
+  margin-right: 1rem;
+  display: inline-block;
+  min-height: 48px;
+}
+
+.link-container.login, .link-container.logout {
+  float: right;
+  margin-right: 0;
+}
+
+.link-container {
+  color: white;
+}
+
+.link-container .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  color: white;
+  text-transform: lowercase;
+  text-decoration: none;
+  padding: 0 0.5rem;
+  position: relative;
+  font-size: 1rem;
+  transition: 175ms ease-in-out;
+  cursor: pointer;
+}
+
+.link-container .link:hover {
+  color: #C82506;
+}
+
+.link-container .active:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transition: 175ms ease-in-out;
+}

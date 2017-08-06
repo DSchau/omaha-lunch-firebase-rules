@@ -1,0 +1,13 @@
+<article>
+  <div class="title-container">
+    <span class="index">{{index}}</span>
+    <h1 class="title" [ngSwitch]="url && url.length > 0">
+      <a [href]="url" target="_blank" rel="noopener" *ngSwitchCase="true">{{title}}</a>
+      <a [routerLink]="['/posts', id]" *ngSwitchCase="false">{{title}}</a>
+    </h1>
+  </div>
+
+  <div class="details-container">
+    <p class="details">462 points by <a [routerLink]="['/users', author]"><opi-user [id]="author"></opi-user></a> <opi-timestamp [lastUpdate]="timestamp"></opi-timestamp> | <a [routerLink]="['/posts', id]">{{(comments?.length || 1) - 1}} comments</a></p>
+  </div>
+</article>

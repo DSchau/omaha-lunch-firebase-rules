@@ -1,0 +1,15 @@
+<article class="post">
+  <div class="details">
+    <h1 class="title" [ngSwitch]="!!(post | async)?.url">
+      <a [href]="(post | async)?.url" target="_blank" rel="noopener" *ngSwitchCase="true">{{(post | async)?.title}}</a>
+      <span *ngSwitchCase="false">{{(post | async)?.title}}</span>
+    </h1>
+    <h2 class="link" *ngIf="(post | async)?.url">({{(post | async)?.url}})</h2>
+  </div>
+  <div class="text" [innerHTML]="(post | async)?.html"></div>
+  <form novalidate (ngSubmit)="save(commentForm.value, commentForm.valid)" [formGroup]="commentForm">
+    <textarea type="text" formControlName="text" rows="2" autosize></textarea>
+    <button type="submit" [disabled]="commentForm.invalid">add comment</button>
+  </form>
+  <opi-comments [ids]="(post | async)?.comments"></opi-comments>
+</article>

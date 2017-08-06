@@ -1,0 +1,3 @@
+<div class="posts">
+  <opi-post *ngFor="let post of (posts | async)?.reverse(); index as i" [title]="post.title" [url]="post.url" [id]="post.$key" [comments]="post.comments" [index]="i + 1" [author]="post.author" [timestamp]="post.timestamp"></opi-post>
+</div>

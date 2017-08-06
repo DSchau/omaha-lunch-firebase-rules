@@ -1,0 +1,10 @@
+:host {
+  min-height: 100%;
+}
+
+opi-profile {
+  border: 2px solid #1a1a1a;
+  border-top-width: 0;
+  padding: 2rem;
+  margin: 0 auto;
+}

@@ -1,0 +1,45 @@
+article {
+  margin-bottom: 1rem;  
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-container:last-child {
+  margin-bottom: 0;
+}
+
+.details-container {
+  display: flex;
+}
+
+.details {
+  padding: 0;
+  margin: 0;
+  margin-left: 40px;
+  color: #666;
+}
+
+.details a {
+  color: inherit;
+}
+
+.index {
+  display: inline-block;
+  font-size: 1.75rem;
+  min-width: 40px;
+  text-align: center;
+  color: #444;
+}
+
+.title {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.title a {
+  color: inherit;
+  text-decoration: none;
+}

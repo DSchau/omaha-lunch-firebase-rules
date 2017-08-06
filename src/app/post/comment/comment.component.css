@@ -1,0 +1,40 @@
+:host {
+  display: block;
+}
+
+.comment {
+  padding: 0.25rem 0;
+  margin: 0.25rem 0;
+  border-bottom: 1px solid #DDD;
+}
+
+.details {
+  display: flex;
+  align-items: flex-end;
+}
+
+.user {
+  color: #666;
+}
+
+.user a {
+  color: inherit;
+}
+
+.timestamp {
+  padding-left: 0.5rem;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.user, .timestamp {
+  vertical-align: bottom;
+}
+
+/*
+ * TODO: remove this garbage
+ */
+::ng-deep img {
+  display: block;
+  max-width: 100%;
+}

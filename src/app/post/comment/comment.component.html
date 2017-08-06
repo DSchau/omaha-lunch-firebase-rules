@@ -1,0 +1,9 @@
+<div class="comment">
+  <div class="details">
+    <a class="user" [routerLink]="['/users', (comment | async)?.author]">
+      <opi-user [id]="(comment | async)?.author"></opi-user>
+    </a>
+    <opi-timestamp class="timestamp" [lastUpdate]="(comment | async)?.timestamp"></opi-timestamp>
+  </div>
+  <div class="text" [innerHTML]="(comment | async)?.html"></div>
+</div>

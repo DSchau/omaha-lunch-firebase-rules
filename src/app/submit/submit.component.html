@@ -1,0 +1,25 @@
+<form novalidate (ngSubmit)="save(postForm.value, postForm.valid)" [formGroup]="postForm">
+  <label>
+    Title
+    <input type="text" formControlName="title">
+  </label>
+  <small class="error" [hidden]="postForm.get('title').valid || (postForm.get('title').pristine && !submitted)">
+    Title is required
+  </small>
+  <label>
+    URL
+    <input type="text" formControlName="url">
+  </label>
+  <small class="error" [hidden]="postForm.get('url').valid || (postForm.get('url').pristine && !submitted)">
+    URL is required
+  </small>
+  <span class="or">or</span>
+  <label>
+    Text
+    <textarea type="text" formControlName="text" rows="3" autosize></textarea>
+  </label>
+  <small class="error" [hidden]="postForm.get('text').valid || (postForm.get('text').pristine && !submitted)">
+    Text is required
+  </small>
+  <button type="submit" [disabled]="postForm.invalid">Submit</button>
+</form>

@@ -1,0 +1,7 @@
+<h2 class="count">{{comments.length}} comment(s)</h2>
+
+<ul class="comments">
+  <li class="comment" *ngFor="let id of comments">
+    <opi-comment [id]="id"></opi-comment>
+  </li>
+</ul>

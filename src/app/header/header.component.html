@@ -1,0 +1,15 @@
+<header>
+  <nav class="navigation">
+    <a class="logo" routerLink="/"></a>
+    <ul class="links">
+      <li class="link-container">
+        <a class="link" routerLink="/posts" routerLinkActive="active">Posts</a>
+      </li>
+      <li class="link-container">
+        <a class="link" routerLink="/submit" routerLinkActive="active">Submit</a>
+      </li>
+      <li class="link-container login" *ngIf="!(auth.user | async)" (click)="login()"><span class="link">Login</span></li>
+      <li class="link-container logout" *ngIf="(auth.user | async)" (click)="logout()"><span class="link">Logout</span></li>
+    </ul>
+  </nav>
+</header>

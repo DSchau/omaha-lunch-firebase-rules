@@ -1,0 +1,17 @@
+.comments {
+  list-style: none;
+  padding-left: 0;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.comment:nth-child(even) {
+}
+
+.count {
+  margin: 0;
+  padding: 0;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+}

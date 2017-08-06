@@ -1,0 +1,10 @@
+<div class="profile">
+  <div class="avatar-container">
+    <img class="avatar" [src]="user?.photoURL">
+  </div>
+  <div class="details-container">
+    <h1 class="name">{{user?.displayName}}</h1>
+    <h2 class="email"><a [href]="'mailto:' + user?.email">{{user?.email}}</a></h2>
+    <p class="last-seen" [hidden]="!user?.metadata?.lastSignedInAt">{{user?.metadata?.lastSignedInAt}}</p>
+  </div>
+</div>
