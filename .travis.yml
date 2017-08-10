@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - stable
+
 cache:
   yarn: true
 
@@ -11,7 +12,10 @@ deploy:
   provider: firebase
   token:
     secure: $FIREBASE_TOKEN
-  message: "Deploying v$TRAVIS_TAG to Firebase"
+  message: Deploying v$TRAVIS_TAG to Firebase
+  skip_cleanup: true
+  on:
+    tags: true
 
 notifications:
   email:
